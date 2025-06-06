@@ -2,7 +2,7 @@
 Simulador de Sensor de Fumaça Quântico
 Este projeto demonstra um conceito básico de computação quântica utilizando o Qiskit para simular um "sensor de fumaça quântico" e um sistema de decisão de evacuação. Ele ilustra como as propriedades quânticas, como superposição e emaranhamento, podem ser aplicadas em um cenário simples.
 
-Como Funciona?
+# Como Funciona?
 O circuito quântico é composto por dois qubits:
 
 Qubit 0 (Sensor de Fumaça): Este qubit representa o sensor. Ele é colocado em um estado de superposição (usando uma porta Hadamard), o que significa que ele existe simultaneamente em dois estados: "sem fumaça" (∣0⟩) e "com fumaça" (∣1⟩). Isso simula a incerteza ou a capacidade de detectar ambos os estados.
@@ -11,21 +11,21 @@ Se o Qubit 0 estiver em ∣0⟩ (sem fumaça), o Qubit 1 permanecerá em ∣0⟩
 Se o Qubit 0 estiver em ∣1⟩ (com fumaça), o Qubit 1 será invertido para ∣1⟩ (evacuação ativada).
 O resultado é que o estado do Qubit 1 está diretamente correlacionado com o estado do Qubit 0 devido ao emaranhamento. Quando o sistema é medido, observamos os estados de ambos os qubits, revelando se a "fumaça" foi detectada e se a "evacuação" foi acionada.
 
-Estados Esperados
+# Estados Esperados
 Devido à superposição inicial no Qubit 0 e o emaranhamento pela porta CNOT, os únicos resultados possíveis após a medição serão:
 
 ∣00⟩: (Sensor: sem fumaça, Evacuação: não) - Ocorre em aproximadamente 50% das vezes.
 ∣11⟩: (Sensor: com fumaça, Evacuação: sim) - Ocorre em aproximadamente 50% das vezes.
 Os estados ∣01⟩ e ∣10⟩ não são observados, demonstrando a correlação criada pelo emaranhamento.
 
-Requisitos
+# Requisitos
 Para rodar este código, você precisará ter o Python e o Qiskit instalados.
 
 Python 3.x
 
 Qiskit: Você pode instalar o Qiskit usando pip:
 
-Bash
+
 
 pip install qiskit
 pip install matplotlib # Para plotar o histograma
@@ -34,7 +34,7 @@ Crie um arquivo chamado smoke_detector_quantum.py.
 
 Copie e cole o seguinte código no arquivo:
 
-Python
+
 
 from qiskit import QuantumCircuit
 from qiskit.primitives import Sampler
@@ -78,7 +78,6 @@ Navegue até o diretório onde o arquivo smoke_detector_quantum.py está salvo.
 
 Execute o script Python:
 
-Bash
 
 python smoke_detector_quantum.py
 Saída do Programa
